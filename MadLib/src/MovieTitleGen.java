@@ -14,12 +14,12 @@ public class MovieTitleGen
 		System.out.print("Choosing randomly from " + adjectives.length + " adjectives ");
 		System.out.println("and " + nouns.length + " nouns (" + (adjectives.length*nouns.length) + " combinations).");
 
-		int adj   = 1 + (int)(Math.random()* adjectives.length); // random num gen of length of adjectives array
-		int n  = 1 + (int)(Math.random()* nouns.length); // random num gen of length of nouns array
+		int adj   = 0 + (int)(Math.random()* adjectives.length); // random num gen of length of adjectives array
+		int n  = 0 + (int)(Math.random()* nouns.length); // random num gen of length of nouns array
 		String adjective= adjectives[adj]; // obtains the adjective at the random location chosen
 		String noun= nouns[n]; // obtains the noun at the random location chosen
 
-		System.out.println( "Your movie title is: " + adjective + " " + noun ); //prints the randomly generated movie title
+		System.out.println( "Your movie title is: " + adjective.substring(0, 1).toUpperCase() +adjective.substring(1) + " " + noun.substring(0,1).toUpperCase() + noun.substring(1) ); //prints the randomly generated movie title
 	}
 
 	/**
